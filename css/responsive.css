@@ -1,0 +1,264 @@
+@media (min-width: 48rem) {
+
+    .site-header {
+        padding: 24px 5%;
+        flex-wrap: nowrap;
+    }
+
+    .navigation {
+        order: initial;
+        width: auto;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .header-button {
+        display: inline-block;
+    }
+
+    .footer-top {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 70px;
+    }
+
+    .footer-logo {
+        font-size: 55px;
+        letter-spacing: -4px;
+    }
+
+    .footer-links {
+        gap: 25px;
+    }
+
+    .hero {
+        min-height: 680px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-content {
+        padding: 80px 8%;
+    }
+
+    .hero h1 {
+        letter-spacing: -6px;
+    }
+
+    .hero-image {
+        min-height: 680px;
+    }
+
+    .intro {
+        grid-template-columns: 25% 75%;
+        gap: 0;
+        padding: 120px 8%;
+    }
+
+    .intro-content h2 {
+        letter-spacing: -4px;
+    }
+
+    .bestsellers {
+        padding: 110px 5%;
+    }
+
+    .section-heading {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .section-heading h2 {
+        letter-spacing: -5px;
+    }
+
+    .burger-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .faq-section {
+        padding: 80px 8%;
+    }
+
+    .promo {
+        min-height: 600px;
+        padding: 80px 8%;
+    }
+
+    .promo h2 {
+        letter-spacing: -5px;
+    }
+
+    .about-hero {
+        padding: 70px 5% 0;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-title {
+        padding: 50px 0;
+    }
+
+    .about-title h1 {
+        letter-spacing: -8px;
+    }
+
+    .about-main-image {
+        height: 650px;
+    }
+
+    .story {
+        padding: 130px 8%;
+        grid-template-columns: 25% 75%;
+        margin-top: 80px;
+        gap: 0;
+    }
+
+    .story-content h2 {
+        letter-spacing: -5px;
+    }
+
+    .values {
+        padding: 120px 8%;
+        grid-template-columns: 40% 60%;
+        gap: 50px;
+    }
+
+    .values-heading h2 {
+        letter-spacing: -6px;
+    }
+
+    .value {
+        gap: 40px;
+        padding: 35px 0;
+    }
+
+    .process {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .process-image {
+        min-height: 700px;
+    }
+
+    .process-content {
+        padding: 100px 10%;
+    }
+
+    .process h2 {
+        letter-spacing: -5px;
+    }
+
+    .about-cta {
+        padding: 150px 5%;
+    }
+
+    .about-cta h2 {
+        letter-spacing: -9px;
+    }
+
+    .menu-intro {
+        min-height: 550px;
+        padding: 100px 8%;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    .menu-intro h1 {
+        line-height: .78;
+        letter-spacing: -8px;
+    }
+
+    .menu-description {
+        justify-self: end;
+    }
+
+    .menu-section {
+        padding: 100px 5%;
+    }
+
+    .menu-heading {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    .menu-heading h2 {
+        letter-spacing: -6px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-note {
+        grid-template-columns: 25% 75%;
+        padding: 110px 8%;
+        gap: 0;
+    }
+
+    .menu-note h2 {
+        letter-spacing: -5px;
+        margin-bottom: 35px;
+    }
+
+    .contact-hero {
+        padding: 120px 8% 100px;
+    }
+
+    .contact-hero h1 {
+        letter-spacing: -10px;
+    }
+
+    .hero-description {
+        margin-top: 60px;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-card {
+        padding: 55px 6%;
+        min-height: 280px;
+        border-right: 1px solid #111;
+        border-bottom: none;
+    }
+
+    .info-card h2 {
+        margin: 70px 0 20px;
+    }
+
+    .contact-form-section {
+        padding: 120px 8%;
+        grid-template-columns: 40% 60%;
+        gap: 80px;
+    }
+
+    .form-submit button {
+        width: auto;
+    }
+
+    .location-section {
+        grid-template-columns: 35% 65%;
+        min-height: 600px;
+    }
+
+    .location-title {
+        padding: 90px 8%;
+    }
+
+    .social-section {
+        padding: 120px 5%;
+    }
+
+    .social-section h2 {
+        letter-spacing: -5px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 64rem) {
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
