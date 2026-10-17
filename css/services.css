@@ -215,9 +215,17 @@ button:focus-visible {
     font-size: 11px;
 }
 
+
 .simple-card figure {
-    width: 80px;
+    width: 220px;
+    max-width: 100%;
     margin-bottom: 15px;
+}
+
+.simple-card figure img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .simple-card h3 {

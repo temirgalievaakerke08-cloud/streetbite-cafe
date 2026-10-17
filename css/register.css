@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.register-page {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5e6ab;
+    color: #111;
+    line-height: 1.5;
+}
+
+.register-page img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.register-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.register-page .site-header {
+    width: 100%;
+    min-height: 103px;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #111;
+    background: #f5e6ab;
+}
+
+.register-page .header-container {
+    display: contents;
+}
+
+.register-page .logo {
+    flex: 0 0 auto;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+    color: #111;
+}
+
+.register-page .logo span {
+    color: #e94b35;
+}
+
+.register-page .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: nowrap;
+    width: auto;
+    order: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.register-page .navigation a {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    color: #111;
+    transition: opacity 0.3s;
+}
+
+.register-page .navigation a:hover,
+.register-page .navigation a[aria-current="page"] {
+    opacity: 0.5;
+}
+
+.register-page .register-order-button {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #111;
+    padding: 10px 20px;
+    background: transparent;
+    color: #111;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.register-page .register-order-button:hover {
+    background: #111;
+    color: white;
+}
+
+
+.register-page .contact-hero {
+    min-height: 0;
+    padding: 100px 7% 70px;
+    display: block;
+    text-align: left;
+    background: #f5e6ab;
+    color: #111;
+    border-bottom: 1px solid #111;
+}
+
+.register-page .contact-hero .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.register-page .contact-hero h1 {
+    max-width: 1000px;
+    margin: 0 0 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(45px, 7vw, 105px);
+    font-weight: 900;
+    line-height: 0.87;
+    letter-spacing: -4px;
+    color: #111;
+}
+
+.register-page .contact-hero > p:last-child {
+    max-width: 450px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.register-page .register-section {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+    gap: 60px;
+    padding: 80px 7%;
+    background: #f5e6ab;
+    color: #111;
+}
+
+.register-page .form-intro {
+    max-width: 400px;
+}
+
+.register-page .form-intro .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.register-page .form-intro h2 {
+    font-size: clamp(35px, 5vw, 65px);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.register-page .form-intro p:not(.section-label) {
+    max-width: 350px;
+    font-size: 16px;
+}
+
+.register-page .contact-form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0;
+}
+
+.register-page .form-group {
+    margin-bottom: 28px;
+}
+
+.register-page .form-group > label,
+.register-page .choice-group legend {
+    display: block;
+    margin-bottom: 10px;
+    color: #111;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.register-page .form-control,
+.register-page .form-select {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 14px 15px;
+    border: 1px solid #111;
+    border-radius: 0;
+    background-color: transparent;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    box-shadow: none;
+}
+
+.register-page .form-control:focus,
+.register-page .form-select:focus {
+    border-color: #e94b35;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(233, 75, 53, 0.18);
+}
+
+.register-page .form-select option {
+    background: #fffdf5;
+    color: #111;
+}
+
+
+.register-page .invalid-feedback {
+    margin-top: 8px;
+    color: #c93825;
+    font-size: 13px;
+}
+
+.register-page .was-validated .form-control:invalid,
+.register-page .was-validated .form-select:invalid {
+    border-color: #e94b35;
+}
+
+.register-page .was-validated .form-control:valid,
+.register-page .was-validated .form-select:valid {
+    border-color: #111;
+}
+
+.register-page .choice-group {
+    min-width: 0;
+    border: 0;
+    border-top: 1px solid #111;
+    padding: 22px 0 0;
+    margin: 35px 0;
+}
+
+.register-page .choice-group legend {
+    float: none;
+    width: auto;
+    padding: 0;
+    margin-bottom: 18px;
+}
+
+.register-page .choice-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 25px 12px 0;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.register-page .choice-option input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: #e94b35;
+    cursor: pointer;
+}
+
+.register-page .register-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.register-page .register-actions button {
+    min-height: 50px;
+    padding: 15px 24px;
+    border: 1px solid #111;
+    border-radius: 0;
+    background: #111;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-page .register-actions button:hover {
+    background: #e94b35;
+    border-color: #e94b35;
+}
+
+.register-page .register-actions .reset-button {
+    background: transparent;
+    color: #111;
+    border-color: #111;
+}
+
+.register-page .register-actions .reset-button:hover {
+    background: #111;
+    color: white;
+}
+
+.register-page #registerFeedback {
+    margin-top: 22px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.register-page .demo-note {
+    margin-top: 20px;
+    color: #444;
+    font-size: 12px;
+}
+
+.register-page .footer {
+    background: #111;
+    color: white;
+    padding: 40px 5% 25px;
+}
+
+.register-page .footer p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+    .register-page .site-header {
+        flex-wrap: wrap;
+    }
+
+    .register-page .navigation {
+        gap: 18px;
+    }
+
+    .register-page .register-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+@media (max-width: 700px) {
+    .register-page .site-header {
+        min-height: 0;
+        padding: 20px 5%;
+        flex-wrap: wrap;
+    }
+
+    .register-page .navigation {
+        width: 100%;
+        order: 3;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .register-page .register-order-button {
+        margin-left: auto;
+    }
+
+    .register-page .contact-hero {
+        padding: 65px 6% 45px;
+    }
+
+    .register-page .contact-hero h1 {
+        font-size: clamp(40px, 10vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .register-page .register-section {
+        padding: 50px 6%;
+        gap: 30px;
+    }
+
+    .register-page .register-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .register-page .register-actions button {
+        width: 100%;
+    }
+
+    .register-page .choice-option {
+        display: flex;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .register-page .logo {
+        font-size: 29px;
+    }
+
+    .register-page .navigation {
+        gap: 12px;
+    }
+
+    .register-page .navigation a {
+        font-size: 10px;
+    }
+
+    .register-page .register-order-button {
+        padding: 9px 12px;
+    }
+}

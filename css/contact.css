@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
     background: #f5e6ab;
     color: #111;
     line-height: 1.5;
@@ -370,4 +371,44 @@ summary:focus-visible {
 .footer-links {
     display: flex;
     gap: 25px;
+}
+
+.contact-form .form-control {
+    border-radius: 0;
+    background-color: transparent;
+    color: #111;
+    box-shadow: none;
+}
+
+.contact-form .form-control:focus {
+    border-color: #e94b35;
+    box-shadow: none;
+}
+
+.contact-form.was-validated .form-control:invalid {
+    border-bottom: 2px solid #e94b35;
+}
+
+.contact-form.was-validated .form-control:valid {
+    border-bottom: 1px solid #111;
+}
+
+.contact-form .invalid-feedback {
+    font-size: 12px;
+}
+
+#contactFeedback {
+    font-size: 13px;
+    margin-top: 10px;
+}
+.logo,
+.navigation a,
+.contact-hero h1,
+.form-intro h2,
+.info-card h2,
+.faq-heading h2,
+.location-title h2,
+.social-section h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
