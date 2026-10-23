@@ -315,3 +315,238 @@ button:focus-visible {
     display: flex;
     gap: 25px;
 }
+
+/* TASK 3: LIVE SEARCH */
+
+.menu-filter {
+    display: block;
+    padding: 65px 6%;
+    border-bottom: 1px solid #111;
+}
+
+.search-heading {
+    margin-bottom: 40px;
+}
+
+.search-heading h2 {
+    font-size: clamp(40px, 7vw, 90px);
+    line-height: 0.9;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+
+.search-heading > p:last-child {
+    font-size: 16px;
+    max-width: 450px;
+}
+
+.search-field {
+    max-width: 700px;
+}
+
+.search-field label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.search-input-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #111;
+    padding-bottom: 12px;
+}
+
+.search-input-row input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 17px;
+    color: #111;
+}
+
+.search-input-row input::placeholder {
+    color: #777;
+}
+
+#searchCount {
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+#noResults {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.menu-card[hidden],
+#noResults[hidden] {
+    display: none !important;
+}
+
+.search-input-row:focus-within {
+    border-bottom-color: #e94b35;
+}
+
+.favorites-section {
+    padding: 80px 6%;
+    border-top: 1px solid #111;
+}
+
+.favorites-section h2 {
+    font-size: clamp(45px, 8vw, 105px);
+    line-height: 0.85;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+}
+
+.favorites-description {
+    font-size: 17px;
+    max-width: 450px;
+    margin-bottom: 50px;
+}
+
+#favoritesForm {
+    max-width: 700px;
+}
+
+#favoritesForm label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.favorites-form-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid #111;
+    padding-bottom: 10px;
+}
+
+.favorites-form-row:focus-within {
+    border-bottom-color: #e94b35;
+}
+
+.favorites-form-row input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #111;
+    font-family: inherit;
+    font-size: 17px;
+}
+
+.favorites-form-row input::placeholder {
+    color: #777;
+}
+
+.favorites-form-row button {
+    flex-shrink: 0;
+    background: #111;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.favorites-form-row button:hover {
+    background: #e94b35;
+}
+
+#favoriteMessage {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.favorites-list-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 700px;
+    margin-top: 55px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #111;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#favoritesList {
+    list-style: none;
+    max-width: 700px;
+}
+
+#favoritesList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    border-bottom: 1px solid #111;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.remove-button {
+    background: transparent;
+    border: 1px solid #111;
+    padding: 10px 16px;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remove-button:hover {
+    background: #e94b35;
+    border-color: #e94b35;
+    color: white;
+}
+
+#favoritesCount {
+    text-transform: uppercase;
+}
+
+.search-input-row input:focus-visible,
+.favorites-form-row input:focus-visible {
+    outline: 2px solid #e94b35;
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    .search-input-row {
+        flex-wrap: wrap;
+    }
+
+    .search-input-row input {
+        flex-basis: 100%;
+    }
+
+    .favorites-section,
+    .menu-filter {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+}

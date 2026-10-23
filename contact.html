@@ -118,30 +118,50 @@
             <p id="contactFeedback" role="status" aria-live="polite"></p>
         </form>
     </section>
-
     <section class="faq-section" id="faq">
         <div class="faq-heading">
             <p class="section-label">FREQUENTLY ASKED QUESTIONS</p>
             <h2>FAQ</h2>
         </div>
-
+        
         <div class="faq-list">
-            <details>
-                <summary>Do you offer vegetarian options?</summary>
-                <p>Yes, we have a special Veggie Burger with a fresh vegetable patty, avocado, and house sauce.</p>
-            </details>
-
-            <details>
-                <summary>Do I need to make a reservation?</summary>
-                <p>Walk-ins are always welcome! However, for groups of 6 or more, we recommend contacting us in advance.</p>
-            </details>
-
-            <details>
-                <summary>Where can I find delivery details?</summary>
-                <p>You can place an order directly through our partners or call our restaurant number for takeaway pickup.</p>
-            </details>
+            
+            <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                    Do you offer vegetarian options?
+                </button>
+                
+                <p class="faq-answer" id="faq-answer-1" hidden>
+                    Yes, we have a special Veggie Burger with a
+                    fresh vegetable patty, avocado, and house sauce.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                    Do I need to make a reservation?
+                </button>
+                <p class="faq-answer" id="faq-answer-2" hidden>
+                    Walk-ins are always welcome! However,
+                    for groups of 6 or more, we recommend contacting
+                    us in advance.
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                Where can I find delivery details?
+            </button>
+            
+            <p class="faq-answer" id="faq-answer-3" hidden>
+                You can place an order directly through our
+                partners or call our restaurant number for
+                takeaway pickup.
+            </p>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section class="location-section">
         <div class="location-title">
@@ -197,6 +217,7 @@
 </footer>
 
 <script src="js/contact-validation.js"></script>
+<script src="js/faq.js" defer></script>
 
 </body>
 </html>

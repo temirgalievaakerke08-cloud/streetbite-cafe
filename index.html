@@ -28,6 +28,12 @@
 </header>
 
 <main id="main-content">
+    <div class="theme-controls">
+        <button type="button" id="themeBtn">
+            DARK MODE
+        </button>
+    </div>
+
 
     <section class="hero">
         <div class="hero-content">
@@ -71,6 +77,25 @@
             </p>
         </div>
     </section>
+
+    <section class="welcome-section">
+        <p class="section-label">02 / SAY HELLO</p>
+        
+        <h2>WELCOME TO FAMOUZ.</h2>
+        
+        <p class="welcome-description">
+            Tell us your name and get a personal welcome!
+        </p>
+        <label for="visitorName">YOUR NAME</label>
+        <div class="welcome-form">
+            <input type="text" id="visitorName" placeholder="Enter your name">
+            <button type="button" id="welcomeBtn">
+                SAY HELLO →
+            </button>
+        </div>
+        <p id="welcomeMessage" aria-live="polite"></p>
+    </section>
+
 
     <section class="bestsellers">
         <div class="section-heading">
@@ -188,6 +213,7 @@
 
     </div>
 </footer>
+<script src="js/home-interaction.js" defer></script>
 
 </body>
 </html>

@@ -51,16 +51,32 @@
             </p>
         </div>
     </section>
-
     <section class="menu-filter">
-        <button class="filter-button active" type="button">ALL MENU</button>
+        <div class="search-heading">
+            <p class="section-label">02 / FIND YOUR FAVORITE</p>
+            <h2>FIND YOUR BITE.</h2>
+            <p>Looking for something specific? Find it here.</p>
+        </div>
+        
+        <div class="search-field">
+            <label for="menuSearch">SEARCH THE MENU</label>
+            <div class="search-input-row">
+                <input type="search" id="menuSearch" placeholder="Search the menu...">
+                <span id="searchCount" aria-live="polite">
+                    8 items found
+                </span>
+            </div>
+        </div>
     </section>
+
 
     <section class="menu-section">
         <div class="menu-heading">
             <p class="section-label">01 / BURGERS</p>
             <h2>BURGERS</h2>
         </div>
+
+        <p id="noResults" hidden>No results found</p>
 
         <div class="menu-grid">
 
@@ -156,6 +172,31 @@
 
         </div>
     </section>
+    <section class="favorites-section">
+        <p class="section-label">03 / YOUR PERSONAL PICKS</p>
+        
+        <h2>YOUR FAVES.</h2>
+        
+        <p class="favorites-description">
+            Good burgers deserve a spot on your list.
+        </p>
+        
+        <form id="favoritesForm">
+            <label for="favoriteInput">ADD TO YOUR LIST</label>
+            <div class="favorites-form-row">
+                <input type="text" id="favoriteInput" placeholder="Type your favorite burger...">
+                <button type="submit">ADD +</button>
+            </div>
+        </form>
+        <p id="favoriteMessage" aria-live="polite"></p>
+        <div class="favorites-list-heading">
+            <span>YOUR LIST</span>
+            <span id="favoritesCount">0 items</span>
+        </div>
+        <ul id="favoritesList"></ul>
+    </section>
+
+   
 
     <section class="menu-note">
         <div class="note-number">
@@ -195,6 +236,7 @@
         </div>
     </div>
 </footer>
+<script src="js/menu-interactions.js" defer></script>
 
 </body>
 </html>
