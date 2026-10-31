@@ -1,74 +1,121 @@
-const menuSearch = document.getElementById("menuSearch");
-const menuCards = document.querySelectorAll(".menu-card");
-const searchCount = document.getElementById("searchCount");
-const noResults = document.getElementById("noResults");
+$(document).ready(function () {
 
-function filterMenu() {
-    const searchText = menuSearch.value.trim().toLowerCase();
-    let count = 0;
 
-    menuCards.forEach(function (card) {
-        const title = card.querySelector("h3").textContent.toLowerCase();
+    let selectedCategory = "all";
 
-        if (title.includes(searchText)) {
-            card.hidden = false;
-            count++;
+    function filterMenu() {
+
+        const searchText = $("#menuSearch").val().trim().toLowerCase();
+
+        let count = 0;
+
+        $(".menu-card").each(function () {
+
+            const card = $(this);
+            const cardText = card.text().toLowerCase();
+            const cardCategory = card.data("category");
+
+            const matchesSearch = cardText.includes(searchText);
+
+            const matchesCategory =
+                selectedCategory === "all" ||
+                cardCategory === selectedCategory;
+
+            if (matchesSearch && matchesCategory) {
+                card.removeAttr("hidden");
+                count++;
+            } else {
+                card.attr("hidden", true);
+            }
+
+        });
+
+        $("#searchCount").text(count + " items found");
+
+        if (count === 0) {
+            $("#noResults").removeAttr("hidden");
         } else {
-            card.hidden = true;
+            $("#noResults").attr("hidden", true);
         }
+
+    }
+
+    $("#menuSearch").on("input", function () {
+        filterMenu();
     });
 
-    searchCount.textContent = count + " items found";
+    $(".filter-button").on("click", function () {
 
-    if (count === 0) {
-        noResults.hidden = false;
-    } else {
-        noResults.hidden = true;
+        selectedCategory = $(this).data("category");
+
+        $(".filter-button")
+            .removeClass("active")
+            .attr("aria-pressed", "false");
+
+        $(this)
+            .addClass("active")
+            .attr("aria-pressed", "true");
+
+        filterMenu();
+
+    });
+
+    filterMenu();
+
+});
+
+// TASK 4: Dynamic Favorites List
+
+$(document).ready(function () {
+
+    function updateFavoritesCount() {
+        const count = $("#favoritesList li").length;
+
+        $("#favoritesCount").text(count + " items");
+
+        if (count === 0) {
+            $("#favoritesEmpty").show();
+        } else {
+            $("#favoritesEmpty").hide();
+        }
     }
-}
 
-menuSearch.addEventListener("input", filterMenu);
-filterMenu();
+    // Add a new favorite
+    $("#favoritesForm").on("submit", function (event) {
+        event.preventDefault();
 
-const favoritesForm = document.getElementById("favoritesForm");
-const favoriteInput = document.getElementById("favoriteInput");
-const favoritesList = document.getElementById("favoritesList");
-const favoritesCount = document.getElementById("favoritesCount");
-const favoriteMessage = document.getElementById("favoriteMessage");
+        const burgerName = $("#favoriteInput").val().trim();
 
-function updateFavoritesCount() {
-    const count = favoritesList.children.length;
-    favoritesCount.textContent = count + " items";
-}
+        if (burgerName === "") {
+            $("#favoriteMessage").text("Please enter a burger name.");
+            return;
+        }
 
-favoritesForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+        $("#favoriteMessage").text("");
 
-    const burgerName = favoriteInput.value.trim();
+        const newItem = $("<li></li>");
+        newItem.text(burgerName);
 
-    if (burgerName === "") {
-        favoriteMessage.textContent = "Please enter a burger name.";
-        return;
-    }
+        const removeButton = $("<button></button>")
+            .text("REMOVE")
+            .attr("type", "button")
+            .addClass("remove-button");
 
-    favoriteMessage.textContent = "";
+        newItem.append(removeButton);
+        $("#favoritesList").append(newItem);
 
-    const newItem = document.createElement("li");
-    newItem.textContent = burgerName;
+        $("#favoriteInput").val("");
 
-    const removeButton = document.createElement("button");
-    removeButton.textContent = "REMOVE";
-    removeButton.type = "button";
-    removeButton.classList.add("remove-button");
-
-    removeButton.addEventListener("click", function () {
-        newItem.remove();
         updateFavoritesCount();
     });
 
-    newItem.appendChild(removeButton);
-    favoritesList.appendChild(newItem);
+    // Remove an item using delegated event
+    $("#favoritesList").on("click", ".remove-button", function () {
+        $(this).parent().remove();
 
-    favoriteInput.value = "";
+        updateFavoritesCount();
+    });
+
     updateFavoritesCount();
+
 });

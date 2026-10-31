@@ -57,7 +57,23 @@
             <h2>FIND YOUR BITE.</h2>
             <p>Looking for something specific? Find it here.</p>
         </div>
-        
+        <div class="category-filters" aria-label="Filter menu by category">
+    <button type="button" class="filter-button active" data-category="all" aria-pressed="true">
+        ALL
+    </button>
+
+    <button type="button" class="filter-button" data-category="burgers" aria-pressed="false">
+        BURGERS
+    </button>
+
+    <button type="button" class="filter-button" data-category="sides" aria-pressed="false">
+        SIDES
+    </button>
+
+    <button type="button" class="filter-button" data-category="drinks" aria-pressed="false">
+        DRINKS
+    </button>
+</div>
         <div class="search-field">
             <label for="menuSearch">SEARCH THE MENU</label>
             <div class="search-input-row">
@@ -80,7 +96,7 @@
 
         <div class="menu-grid">
 
-            <article class="menu-card">
+            <article class="menu-card" data-category="burgers">
                 <figure>
                     <img src="images/classicburger.jpg" alt="Classic beef burger with cheddar and sauce">
                 </figure>
@@ -91,7 +107,7 @@
                 </div>
             </article>
 
-            <article class="menu-card">
+            <article class="menu-card" data-category="burgers">
                 <figure>
                     <img src="images/cheeseburger1.jpg" alt="Double cheeseburger with two patties">
                 </figure>
@@ -102,7 +118,7 @@
                 </div>
             </article>
 
-            <article class="menu-card">
+            <article class="menu-card" data-category="burgers">
                 <figure>
                     <img src="images/chickenburger.jpg" alt="Crispy chicken burger with lettuce">
                 </figure>
@@ -113,7 +129,7 @@
                 </div>
             </article>
 
-            <article class="menu-card">
+            <article class="menu-card" data-category="burgers">
                 <figure>
                     <img src="images/vege.jpg" alt="Spicy burger with jalapenos">
                 </figure>
@@ -124,7 +140,7 @@
                 </div>
             </article>
 
-            <article class="menu-card">
+            <article class="menu-card" data-category="burgers">
                 <figure>
                     <img src="images/cheeseburger1.jpg" alt="Bacon burger with BBQ sauce">
                 </figure>
@@ -135,7 +151,7 @@
                 </div>
             </article>
 
-            <article class="menu-card">
+            <article class="menu-card" data-category="burgers">
                 <figure>
                     <img src="images/vege.jpg" alt="Vegetarian burger with avocado and lettuce">
                 </figure>
@@ -146,7 +162,7 @@
                 </div>
             </article>
 
-            <article class="menu-card simple-card">
+            <article class="menu-card simple-card" data-category="sides">
                 <div class="card-number">07</div>
                 <div>
                     <figure>
@@ -158,7 +174,7 @@
                 </div>
             </article>
 
-            <article class="menu-card simple-card dark-card">
+            <article class="menu-card simple-card dark-card" data-category="drinks">
                 <div class="card-number">08</div>
                 <div>
                     <figure>
@@ -194,6 +210,7 @@
             <span id="favoritesCount">0 items</span>
         </div>
         <ul id="favoritesList"></ul>
+        <p id="favoritesEmpty">Your list is empty. Add your favorite burger!</p>
     </section>
 
    
@@ -236,6 +253,7 @@
         </div>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
 <script src="js/menu-interactions.js" defer></script>
 
 </body>

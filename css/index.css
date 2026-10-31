@@ -518,3 +518,12 @@ input:focus-visible {
     outline: 3px solid #e94b35;
     outline-offset: 3px;
 }
+.error-message {
+    color: red;
+    margin-top: 12px;
+}
+
+.success-message {
+    color: green;
+    margin-top: 12px;
+}

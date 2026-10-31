@@ -550,3 +550,29 @@ button:focus-visible {
         padding-bottom: 55px;
     }
 }
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.menu-card[hidden] {
+    display: none !important;
+}
+
+.filter-button:focus-visible {
+    outline: 3px solid #e94b35;
+    outline-offset: 4px;
+}
+#favoritesEmpty {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #777;
+}
+
+.remove-button {
+    margin-left: 15px;
+    cursor: pointer;
+}

@@ -1,26 +1,33 @@
-const nameInput = document.getElementById("visitorName");
-const welcomeBtn = document.querySelector("#welcomeBtn");
-const welcomeMessage = document.getElementById("welcomeMessage");
 
-welcomeBtn.addEventListener("click", function () {
-    const name = nameInput.value.trim();
+$(document).ready(function () {
 
-    if (name === "") {
-        welcomeMessage.textContent = "Please enter your name.";
-    } else {
-        welcomeMessage.textContent =
-            "Welcome to FAMOUZ Burger, " + name + "!";
-    }
-});
+    $("#welcomeBtn").on("click", function () {
 
-const themeBtn = document.getElementById("themeBtn");
+        const name = $("#visitorName").val().trim();
 
-themeBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-theme");
+        if (name === "") {
+            $("#welcomeMessage")
+                .text("Please enter your name.")
+                .addClass("error-message");
+        } else {
+            $("#welcomeMessage")
+                .text("Welcome to FAMOUZ Burger, " + name + "!")
+                .removeClass("error-message")
+                .addClass("success-message");
+        }
 
-    if (document.body.classList.contains("dark-theme")) {
-        themeBtn.textContent = "LIGHT MODE";
-    } else {
-        themeBtn.textContent = "DARK MODE";
-    }
+    });
+
+    $("#themeBtn").on("click", function () {
+
+        $("body").toggleClass("dark-theme");
+
+        if ($("body").hasClass("dark-theme")) {
+            $(this).text("LIGHT MODE");
+        } else {
+            $(this).text("DARK MODE");
+        }
+
+    });
+
 });
