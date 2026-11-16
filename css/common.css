@@ -8,3 +8,42 @@ body.dark-theme :is(input,textarea,select) { background-color: #292929; border-c
 body.dark-theme .invalid-feedback, body.dark-theme #registerFeedback, body.dark-theme #loginFeedback { color: #ff9c8e; }
 @media(max-width: 1000px) { .site-header { flex-wrap: wrap !important; } .navigation { flex-wrap: wrap !important; gap: 14px !important; } }
 @media(max-width:700px) { .navigation { width: 100%; order: 3; } }
+
+/* Keep form controls and secondary actions visible in dark mode. */
+body.register-page.dark-theme :is(.form-control, .form-select) {
+    background-color: #292929;
+    border-color: #b9ad95;
+    color: #f5e6c6;
+}
+body.register-page.dark-theme .choice-group {
+    border-color: #777;
+}
+body.register-page.dark-theme .register-actions .reset-button {
+    border-color: #f5e6c6;
+    color: #f5e6c6;
+}
+body.register-page.dark-theme .register-actions .reset-button:hover {
+    background: #f5e6c6;
+    color: #171717;
+}
+body.register-page.dark-theme .register-order-button {
+    border-color: #f5e6c6;
+    color: #f5e6c6;
+}
+body.register-page.dark-theme .register-order-button:hover {
+    background: #f5e6c6;
+    color: #171717;
+}
+body.dark-theme :is(.filter-button, .remove-button) {
+    border-color: #f5e6c6;
+    color: #f5e6c6;
+}
+body.dark-theme .filter-button:is(:hover, .active) {
+    background: #f5e6c6;
+    color: #171717;
+}
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder {
+    color: #c8bfae;
+    opacity: 1;
+}
