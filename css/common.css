@@ -47,3 +47,8 @@ body.dark-theme textarea::placeholder {
     color: #c8bfae;
     opacity: 1;
 }
+
+.form-success { color: #176326; }
+.form-error { color: #b32315; }
+body.dark-theme .form-success { color: #a9e6ad; }
+body.dark-theme .form-error { color: #ffaaa0; }

@@ -18,18 +18,21 @@ The project focuses on HTML, CSS, JavaScript, jQuery, responsive design, and use
 
 ## Website Pages
 
-The website contains five main pages:
+The website contains seven main pages:
 
 1. **Home (`index.html`)** — homepage with a welcome message and dark/light mode button.
 2. **Menu (`services.html`)** — burger menu with live search, category filters, and a personal favorites list.
 3. **About (`about.html`)** — information about the restaurant.
 4. **Contact (`contact.html`)** — contact information, validated contact form, and animated FAQ section.
-5. **Register (`register.html`)** — user registration page.
+5. **Register (`register.html`)** — validated demo registration.
+6. **Log in (`login.html`)** — validates a saved demo account.
+7. **Profile (`profile.html`)** — shows locally stored account details and provides logout.
 
 ## Main Features
 
 - Interactive welcome message using jQuery.
-- Dark and light theme switching.
+- Dark and light theme switching, saved between pages.
+- Demo registration, login and profile using localStorage.
 - Live menu search.
 - Menu filtering by categories.
 - Dynamic favorites list with add and remove functionality.
@@ -90,7 +93,7 @@ The website was tested for:
 
 ## Deployment
 
-The website is intended to be published using GitHub Pages.
+The website is published using GitHub Pages.
 
 **Live Website:** https://temirgalievaakerke08-cloud.github.io/streetbite-cafe/
 

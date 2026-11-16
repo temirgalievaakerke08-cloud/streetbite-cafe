@@ -46,11 +46,11 @@ $(document).ready(function () {
         if (isValid) {
             $("#contactFeedback")
                 .text("Success! Your demo form is valid.")
-                .css("color", "green");
+                .removeClass("form-error").addClass("form-success");
         } else {
             $("#contactFeedback")
                 .text("Please correct the highlighted fields and try again.")
-                .css("color", "#e94b35");
+                .removeClass("form-success").addClass("form-error");
         }
     });
 
