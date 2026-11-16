@@ -27,6 +27,15 @@ $(document).ready(function () {
             $("#email").removeClass("is-invalid").addClass("is-valid");
         }
 
+        const phone = $("#phone").val().trim();
+        const phoneDigits = phone.replace(/\D/g, "");
+        if (phone && (!/^\+?[0-9 ()-]+$/.test(phone) || phoneDigits.length < 7 || phoneDigits.length > 15)) {
+            $("#phone").addClass("is-invalid").removeClass("is-valid");
+            isValid = false;
+        } else {
+            $("#phone").removeClass("is-invalid").toggleClass("is-valid", Boolean(phone));
+        }
+
         if (message.length < 10 || message.length > 500) {
             $("#message").addClass("is-invalid").removeClass("is-valid");
             isValid = false;

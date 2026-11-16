@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+    <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body>
@@ -26,6 +27,8 @@
         <a href="about.html">ABOUT</a>
         <a href="contact.html" aria-current="page">CONTACT</a>
         <a href="register.html">REGISTER</a>
+        <a href="login.html">LOG IN</a>
+        <a href="profile.html">PROFILE</a>
     </nav>
 
     <a href="services.html" class="header-button">
@@ -104,6 +107,11 @@
                 autocomplete="email" required
                 class="form-control">
                 <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="form-group">
+                <label for="phone">PHONE (OPTIONAL)</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" class="form-control">
+                <div class="invalid-feedback">Enter a valid phone number with 7–15 digits.</div>
             </div>
             <div class="form-group">
                 <label for="message">MESSAGE</label>
@@ -221,5 +229,6 @@
 <script src="js/contact-validation.js"></script>
 <script src="js/faq.js" defer></script>
 
+<script src="js/theme.js"></script>
 </body>
 </html>

@@ -92,10 +92,13 @@ The website was tested for:
 
 The website is intended to be published using GitHub Pages.
 
-**Live Website:** [Insert your GitHub Pages link here]
+**Live Website:** https://temirgalievaakerke08-cloud.github.io/streetbite-cafe/
 
-**GitHub Repository:** [Insert your repository link here]
+**GitHub Repository:** https://github.com/temirgalievaakerke08-cloud/streetbite-cafe
 
 ## Conclusion
 
 This project helped us improve our skills in HTML, CSS, JavaScript, and jQuery. We learned how to create interactive website features, work with responsive layouts, validate forms, and use GitHub for project management.
+## Demo accounts
+
+Registration and login are a front-end simulation using localStorage in the current browser. Use sample details and a password you do not use elsewhere; credentials are stored locally without a backend.

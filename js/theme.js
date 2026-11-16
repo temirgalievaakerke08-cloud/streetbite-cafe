@@ -1,0 +1,3 @@
+const themeButton = document.createElement("button"); themeButton.type = "button"; themeButton.className = "global-theme-button"; document.querySelector(".site-header").append(themeButton);
+function applyTheme() { const dark = localStorage.getItem("famouzTheme") === "dark"; document.body.classList.toggle("dark-theme", dark); themeButton.textContent = dark ? "LIGHT MODE" : "DARK MODE"; themeButton.setAttribute("aria-pressed", String(dark)); }
+themeButton.addEventListener("click", () => { localStorage.setItem("famouzTheme", document.body.classList.contains("dark-theme") ? "light" : "dark"); applyTheme(); }); applyTheme();

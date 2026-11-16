@@ -1,40 +1,16 @@
-const registerForm = document.getElementById("registerForm");
-const passwordInput = document.getElementById("password");
-const confirmPasswordInput = document.getElementById("confirmPassword");
-const registerFeedback = document.getElementById("registerFeedback");
-
-function validatePasswords() {
-    if (confirmPasswordInput.value !== passwordInput.value) {
-        confirmPasswordInput.setCustomValidity("Passwords do not match.");
-    } else {
-        confirmPasswordInput.setCustomValidity("");
-    }
-}
-
-passwordInput.addEventListener("input", validatePasswords);
-confirmPasswordInput.addEventListener("input", validatePasswords);
-
-registerForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    validatePasswords();
-    registerForm.classList.add("was-validated");
-
-    if (!registerForm.checkValidity()) {
-        registerFeedback.textContent =
-            "Please correct the highlighted fields and try again.";
-        registerFeedback.style.color = "#e94b35";
-        return;
-    }
-
-    registerFeedback.textContent =
-        "Success! Your registration form is valid. This is a demo only.";
-    registerFeedback.style.color = "green";
+const form = document.getElementById("registerForm");
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirmPassword");
+const feedback = document.getElementById("registerFeedback");
+function checkPasswords() { confirmPassword.setCustomValidity(confirmPassword.value === password.value ? "" : "Passwords do not match."); }
+password.addEventListener("input", checkPasswords); confirmPassword.addEventListener("input", checkPasswords);
+form.addEventListener("submit", event => {
+ event.preventDefault(); checkPasswords(); form.classList.add("was-validated");
+ if (!form.checkValidity()) { feedback.textContent = "Please correct the highlighted fields and try again."; return; }
+ const email = document.getElementById("registerEmail").value.trim().toLowerCase();
+ const users = JSON.parse(localStorage.getItem("famouzUsers") || "[]");
+ if (users.some(user => user.email === email)) { feedback.textContent = "This email is already registered. Please log in."; return; }
+ users.push({firstName: document.getElementById("firstName").value.trim(), lastName: document.getElementById("lastName").value.trim(), email, password: password.value, country: document.getElementById("country").value});
+ localStorage.setItem("famouzUsers", JSON.stringify(users)); localStorage.setItem("famouzCurrentUser", email); location.href = "profile.html";
 });
-
-registerForm.addEventListener("reset", function () {
-    registerForm.classList.remove("was-validated");
-    registerFeedback.textContent = "";
-    passwordInput.setCustomValidity("");
-    confirmPasswordInput.setCustomValidity("");
-});
+form.addEventListener("reset", () => { form.classList.remove("was-validated"); feedback.textContent = ""; confirmPassword.setCustomValidity(""); });

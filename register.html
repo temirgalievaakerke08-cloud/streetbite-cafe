@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
-
 <body class="register-page">
 
 <header class="site-header">
@@ -24,6 +23,8 @@
         <a href="about.html">ABOUT</a>
         <a href="contact.html">CONTACT</a>
         <a href="register.html" aria-current="page">REGISTER</a>
+        <a href="login.html">LOG IN</a>
+        <a href="profile.html">PROFILE</a>
     </nav>
 
     <a href="services.html" class="register-order-button">ORDER</a>
@@ -68,8 +69,8 @@
             <div class="form-group">
                 <label for="password">PASSWORD *</label>
                 <input class="form-control" type="password" id="password"
-                    name="password" required minlength="8" autocomplete="new-password">
-                <div class="invalid-feedback">Password must contain at least 8 characters.</div>
+                    name="password" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" autocomplete="new-password">
+                <div class="invalid-feedback">Use at least 8 characters, including uppercase, lowercase and a number.</div>
             </div>
 
             <div class="form-group">
@@ -138,7 +139,8 @@
             </div>
 
             <p id="registerFeedback" role="status" aria-live="polite"></p>
-            <p class="demo-note">* Required fields. This is a demo form; no account will be created or information stored.</p>
+            <p class="demo-note">* Required fields. Demo only: account details are stored in this browser. Use a sample password.</p>
+        <p>Already have an account? <a href="login.html">Log in</a>.</p>
         </form>
     </section>
 </main>
@@ -148,5 +150,6 @@
 </footer>
 
 <script src="js/register-validation.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>

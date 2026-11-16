@@ -1,0 +1,10 @@
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #e94b35; outline-offset: 3px; }
+.global-theme-button, .account-button { border: 1px solid currentColor; background: transparent; color: inherit; padding: 10px 14px; font: 700 11px Arial,sans-serif; cursor: pointer; transition: transform .2s, background .2s; }
+.global-theme-button:hover, .account-button:hover { transform: translateY(-2px); background: #e94b35; color: white; }
+body.dark-theme { background: #171717 !important; color: #f5e6c6 !important; }
+body.dark-theme :is(.site-header, .contact-hero, .contact-form-section, .register-section, .form-intro, .menu-section, .about-section, .hero, .welcome-section, .menu-card, .faq-section, .contact-info-section) { background-color: #171717 !important; color: #f5e6c6 !important; border-color: #777 !important; }
+body.dark-theme :is(h1,h2,h3,p,label,legend,a,input,textarea,select,.navigation a,.logo,.section-label,.form-control,.form-select) { color: #f5e6c6; }
+body.dark-theme :is(input,textarea,select) { background-color: #292929; border-color: #aaa; }
+body.dark-theme .invalid-feedback, body.dark-theme #registerFeedback, body.dark-theme #loginFeedback { color: #ff9c8e; }
+@media(max-width: 1000px) { .site-header { flex-wrap: wrap !important; } .navigation { flex-wrap: wrap !important; gap: 14px !important; } }
+@media(max-width:700px) { .navigation { width: 100%; order: 3; } }
